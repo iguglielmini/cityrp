@@ -1,0 +1,20 @@
+name: Discord Notification
+
+on:
+  push:
+    branches:
+      - main # Substitua pelo nome da sua branch
+
+jobs:
+  discord_notification:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Send notification to Discord
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+        webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
+        text: 'Novo commit na branch: ${{ github.ref }} por ${{ github.actor }}.'
