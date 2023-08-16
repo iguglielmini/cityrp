@@ -6,7 +6,7 @@ import styled from "styled-components/native";
 export const ButtonIcon = styled(TouchableOpacity)<IBaseButtonProps>`
   width: 100%;
   height: 56px;
-  background-color: ${theme.colors.discord};
+  background-color: ${theme.colors.primary};
   border-radius: 8px;
   flex-direction: row;
   align-items: center;
