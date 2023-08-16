@@ -1,12 +1,9 @@
 import { theme } from "@/styles/theme";
+import { TouchableOpacity } from "react-native";
+import { IBaseButtonProps } from "@/types/ICommon";
 import styled from "styled-components/native";
 
-export const Content = styled.View`
-  margin-top: 24px;
-  margin-left: 16px;
-`;
-
-export const ButtonIcon = styled.TouchableOpacity`
+export const ButtonIcon = styled(TouchableOpacity)<IBaseButtonProps>`
   width: 100%;
   height: 56px;
   background-color: ${theme.colors.primary};
@@ -28,8 +25,6 @@ export const IconWrapper = styled.View`
   height: 56px;
   justify-content: center;
   align-items: center;
-  border-right-width: 1vw;
-  border-color: ${theme.colors.line};
 `;
 
 export const IconImage = styled.Image`

@@ -15,7 +15,7 @@ const Login: React.FC = () => {
           </S.Title>
           <S.SubTitle>Conecte-se e organize suas conquistas</S.SubTitle>
         </S.Section>
-        {/* <Button title="Entrar com discord" onPress={() => {}} /> */}
+        <Button title="Entrar com discord" onPress={() => {}} />
       </S.Content>
     </Background>
   );

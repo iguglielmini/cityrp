@@ -1,14 +1,15 @@
 import React from "react";
-import { TouchableOpacityProps } from "react-native";
 
 import * as S from "./styles";
 import DiscordImg from "@/assets/images/discord.png";
+import { IButtonProps } from "@/types/ICommon";
 
-type IButtonIcon = TouchableOpacityProps & {
-  title: string;
-};
-
-const Button: React.FC<IButtonIcon> = ({ title, ...rest }) => {
+const Button: React.FC<IButtonProps> = ({
+  title,
+  loading,
+  loadingColor,
+  ...rest
+}) => {
   return (
     <S.ButtonIcon {...rest}>
       <S.IconWrapper>
