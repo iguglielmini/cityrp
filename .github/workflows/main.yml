@@ -3,18 +3,18 @@ name: Discord Notification
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   discord_notification:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Send notification to Discord
-      uses: appleboy/discord-action@master
-      with:
-        webhook_id: 1141503061278326825
-        webhook_token: dJn6sm9SlTSxGuGUqhKRrRONCPHdB3l4jSvv0Z03nwa50JfFnzR8qunkvqa52Ju_mf8K
-        text: 'Novo commit na branch: ${{ github.ref }} por ${{ github.actor }}.'
+      - name: Send notification to Discord
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: 1141508212747665408
+          webhook_token: NoCvLGK88XH-G4WshfmX8bpBIlL87IodaUT48zCdGdpKL60gKXsOMZJR9DU7WWv1Dt5o
+          text: "Novo commit na branch: ${{ github.ref }} por ${{ github.actor }}."
