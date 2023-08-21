@@ -30,4 +30,22 @@ interface INavProps {
   onPress: () => void;
 }
 
-export { IButtonProps, ILoadingProps, IBaseButtonProps, IUserProps, INavProps };
+interface ITicketProps {
+  id?: number;
+  image: string;
+  title?: string;
+  price?: number;
+  category?: number;
+  createDate?: string;
+  description: string;
+  onPress?: () => void;
+}
+
+export {
+  IButtonProps,
+  ILoadingProps,
+  IBaseButtonProps,
+  IUserProps,
+  INavProps,
+  ITicketProps,
+};
