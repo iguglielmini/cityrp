@@ -29,6 +29,24 @@ const Home: React.FC = () => {
               price={1}
             />
           </S.Box>
+          <S.Box>
+            <S.TitleSection>Eventos</S.TitleSection>
+            <Card
+              onPress={() => navigate("Product")}
+              image={Coin}
+              title="1 Coins"
+              price={1}
+            />
+          </S.Box>
+          <S.Box>
+            <S.TitleSection>Forúns</S.TitleSection>
+            <Card
+              onPress={() => navigate("Product")}
+              image={Coin}
+              title="1 Coins"
+              price={1}
+            />
+          </S.Box>
         </S.Scroll>
       </S.Content>
     </Background>
