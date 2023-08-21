@@ -41,11 +41,23 @@ interface ITicketProps {
   onPress?: () => void;
 }
 
+interface IInfoProductsProps {
+  name?: string;
+  image?: string;
+  price?: string;
+  details1?: string;
+  details2?: string;
+  details3?: string;
+  description?: string;
+  payment?: () => void;
+}
+
 export {
+  INavProps,
+  IUserProps,
+  ITicketProps,
   IButtonProps,
   ILoadingProps,
   IBaseButtonProps,
-  IUserProps,
-  INavProps,
-  ITicketProps,
+  IInfoProductsProps,
 };

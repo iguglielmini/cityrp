@@ -26,6 +26,12 @@ export const Section = styled(View)`
   flex-direction: row;
 `;
 
+export const Box = styled(View)`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+`;
+
 export const Textinfo = styled(Text)`
   font-size: 24px;
   margin-right: 6px;
@@ -53,6 +59,6 @@ export const ButtonAvatar = styled(TouchableOpacity)`
 export const ButtonLoja = styled(TouchableOpacity)``;
 
 export const ImageLoja = styled(Image)`
-    width: 42px;
-    height: 42px;
+  width: 42px;
+  height: 42px;
 `;

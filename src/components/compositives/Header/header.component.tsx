@@ -1,13 +1,13 @@
 import React from "react";
+import Icon from "react-native-vector-icons/FontAwesome";
 import { LinearGradient } from "expo-linear-gradient";
 
 import * as S from "./styles";
 import { theme } from "@/styles/theme";
 import { IUserProps } from "@/types/ICommon";
 import TestImg from "@/assets/images/bg-login.png";
-import IconMoney from "@/assets/images/icon-dinheiro.png";
 
-const Header: React.FC<IUserProps> = ({ name, image, onPress, loja }) => {
+const Header: React.FC<IUserProps> = ({ name, onPress, loja }) => {
   const { secondary50, secondary70 } = theme.colors;
   return (
     <S.Content>
@@ -32,9 +32,11 @@ const Header: React.FC<IUserProps> = ({ name, image, onPress, loja }) => {
           <S.TextMessage>Bem-vindo a cidade Malta</S.TextMessage>
         </S.Div>
       </S.ButtonAvatar>
-      <S.ButtonLoja onPress={loja}>
-        <S.ImageLoja source={IconMoney} />
-      </S.ButtonLoja>
+      <S.Box>
+        <S.ButtonLoja onPress={loja}>
+          <Icon name="bell" size={32} color="#fff" />
+        </S.ButtonLoja>
+      </S.Box>
     </S.Content>
   );
 };

@@ -32,14 +32,6 @@ const Settings: React.FC = () => {
             createDate="21/08/23"
             description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"
           />
-          <Ticket
-            price={10}
-            image="ticket"
-            title="Denuncias"
-            onPress={() => {}}
-            createDate="21/08/23"
-            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"
-          />
         </S.ContentList>
       </S.Content>
     </Background>
