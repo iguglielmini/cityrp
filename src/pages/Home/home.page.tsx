@@ -1,12 +1,11 @@
 import React from "react";
-import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native";
+import { Background, Info } from "@/components/basics";
+import { useNavigation } from "@react-navigation/native";
+import { Card, CardStreamer, Header } from "@/components/compositives";
 
 import * as S from "./styles";
-import { Background } from "@/components/basics";
-import { Card, CardStreamer, Header } from "@/components/compositives";
 import image from "@/assets/images/bg-login.png";
-import Coin from "@/assets/images/coins.jpg";
 import { listStreamer } from "@/mocks/listStreamer.mock";
 import { listEvent, listProduct } from "@/mocks/listProduct.mock";
 
@@ -22,6 +21,11 @@ const Home: React.FC = () => {
           loja={() => navigate("Notification")}
           image={image}
         />
+        {/* Info basic user */}
+        <S.Box>
+          <Info coins={800} bank={292589} carros={3} />
+        </S.Box>
+        {/* escolhas e flatlist */}
         <S.Scroll>
           {/* doaçao */}
           <S.Box2>
@@ -52,10 +56,10 @@ const Home: React.FC = () => {
               keyExtractor={(item) => item.id}
               renderItem={({ item }) => (
                 <Card
-                  onPress={() => navigate("Product")}
+                  onPress={() => navigate("Event")}
                   image={item.image}
                   title={item.title}
-                  price={item.price}
+                  price={item.price as never}
                 />
               )}
             />
