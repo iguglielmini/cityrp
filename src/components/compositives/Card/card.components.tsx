@@ -7,7 +7,7 @@ interface ICardProps {
   onPress: () => void;
   image?: string;
   title?: string;
-  price?: number;
+  price: number;
 }
 
 const Card: React.FC<ICardProps> = ({ onPress, image, title, price }) => {
@@ -16,7 +16,7 @@ const Card: React.FC<ICardProps> = ({ onPress, image, title, price }) => {
       <S.Content source={image as never} resizeMode="contain">
         <S.Box>
           <S.Title>{title}</S.Title>
-          <S.SubTitle>{formatCurrency(price | 0)}</S.SubTitle>
+          {price && <S.SubTitle>{formatCurrency(price | 0)}</S.SubTitle>}
         </S.Box>
       </S.Content>
     </S.ButtonCard>

@@ -11,7 +11,7 @@ export const Content = styled.View`
 
 export const Scroll = styled(ScrollView)`
   width: 100%;
-  margin-bottom: 82px;
+  margin-bottom: 120px;
 `;
 
 export const TitleSection = styled(Text)`
@@ -23,5 +23,9 @@ export const TitleSection = styled(Text)`
 export const Box = styled(View)`
   padding-left: 16px;
   padding-right: 16px;
+  margin-bottom: 24px;
+`;
+
+export const Box2 = styled(View)`
   margin-bottom: 24px;
 `;
