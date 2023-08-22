@@ -1,6 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Home, Product, Setting } from "@/pages";
+import { Home, Notification, Product, Setting } from "@/pages";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -10,6 +10,7 @@ const AppRoutes = () => {
       <Screen name="Home" component={Home} />
       <Screen name="Product" component={Product} />
       <Screen name="Settings" component={Setting} />
+      <Screen name="Notification" component={Notification} />
     </Navigator>
   );
 };

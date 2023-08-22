@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         <Header
           name="italoguglielmini"
           onPress={() => navigate("Settings")}
-          loja={() => {}}
+          loja={() => navigate("Notification")}
           image={image}
         />
         <S.Scroll>
